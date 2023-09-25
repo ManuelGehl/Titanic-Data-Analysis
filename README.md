@@ -1,10 +1,10 @@
 # Titanic data analysis and survival prediction
 
-![Titanic]("https://github.com/ManuelGehl/titanic_kaggle/blob/main/Images/titanic.png?raw=true")
+<img src="https://github.com/ManuelGehl/titanic_kaggle/blob/main/Images/titanic.png?raw=true" width=500>
 
 ## Overview
 
-This repository contains my data analysis project on the iconic Titanic dataset from [Kaggle]("https://www.kaggle.com/competitions/titanic/overview"). 
+This repository contains my data analysis project on the iconic Titanic dataset from ![Kaggle]("https://www.kaggle.com/competitions/titanic/overview"). 
 
 ## Introduction
 
