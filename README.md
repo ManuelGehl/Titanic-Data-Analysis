@@ -1,6 +1,6 @@
 # Titanic data analysis and survival prediction
 
-![Titanic]()
+![Titanic]("https://github.com/ManuelGehl/titanic_kaggle/blob/main/Images/titanic.png?raw=true")
 
 ## Overview
 
