@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains my data analysis project on the iconic Titanic dataset from ![Kaggle]("https://www.kaggle.com/competitions/titanic/overview"). 
+This repository contains my data analysis project on the iconic Titanic dataset from [Kaggle](https://www.kaggle.com/competitions/titanic/overview). 
 
 ## Introduction
 
