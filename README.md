@@ -6,17 +6,22 @@
 
 This repository contains my data analysis project on the iconic Titanic dataset from [Kaggle](https://www.kaggle.com/competitions/titanic/overview). 
 
+The aim is to discover the factors that impacted the survival of passengers on the Titanic and develop a predictive machine learning model based on passenger characteristics.
+
 ## Introduction
 
-The Titanic dataset is a classic dataset, often used by beginners in data science and machine learning. It contains information about the passengers on board the Titanic, including demographics and whether or not they survived. Through exploratory data analysis and machine learning techniques, I aim to uncover insights and build a predictive model to determine the probability of survival.
+  On April 14, 1912, 11:40 PM the RMS Titanic, during her maiden voyage from Southampton to New York, collided with an iceberg. This significant incident in nautical history resulted in the tragic sinking of the supposedly unsinkable vessel within just 160 minutes, causing the loss of numerous passengers and crew members. The Titanic was a monumental achievement, at 291.1 meters it was the largest moving structure of its time and had a capacity of up to 3,547 passengers. However, on the night of the sinking, there were only 2,223 people on board. It is worth mentioning that despite the capability to carry up to 64 lifeboats, the ship was only outfitted with 20, a few of which were not even completely occupied.
+  
+  Today, the remains of this massive ship lie split in two, 12,600 feet below the ocean's surface, and are listed as a UNESCO World Underwater Heritage Site. The story of the legendary ship remains fascinating to this day. It is a tale of man's technological progress and his desire to overcome the limits of nature, but in the end he fails to do so.
 
-##Data Exploration.
+## Data Exploration
 
 ## Machine learning model
-
-Based on my analysis, I will develop a machine learning model to predict passenger survival. I experiment with different algorithms and techniques to achieve the best performance.
 
 ## Results and Discussion
 
 ## Outlook
+
+## Literature
+Titanic Facts • 1,000+ Fascinating Facts and Figures. https://titanicfacts.net/ (2017).
 
