@@ -43,33 +43,42 @@ The distribution of the various features revealed a significant imbalance for vi
 
 <br>
  <img src="https://github.com/ManuelGehl/Titanic-data-analysis/blob/main/Images/Histogram.png?raw=true">
+ 
  ***Figure 1*** *: Histograms showing the distribution of different features in the training dataset. Passenger class, number of siblings/spouses on board, and number of parents/children on board are denoted by Pclass, SibSp, and Parch, respectively.*
 <br>
 
 **Relationship between survival and different features**
 
 Survival rates on the Titanic were strongly associated with passenger class, fare paid, and gender, and to a lesser extent with age, number of parents/children and siblings/spouses, and port of embarkation (**Fig. 2A**). Passenger class had the highest absolute correlation coefficient with survival (−0.34) of all numerically coded features tested. The probability of survival increased successively from third class passengers with 24.2% to second class with 47.3% and first class with 63.0% (**Fig. 2B**). This behavior is most likely related to the fare paid, which had the second highest absolute correlation coefficient of 0.26 (**Fig. 2A**). In terms of correlation coefficient, the other characteristics tested had a much smaller impact on survival. The correlation between age and survival is slightly negative, with a coefficient of −0.08, indicating that younger passengers had a slightly better chance of surviving the sinking. Survival rates for men and women differ significantly, with women having almost four times the chance of survival at 74.2% compared to 18.9% for men. Interestingly, the port of embarkation seems to play a bigger role in the survival of passengers.  Passengers departing from Cherbourg had the highest survival rate at 55.4%, while those departing from Queenstown or Southampton had similar rates at 39.0% and 33.7%, respectively (**Fig. 2B**). The number of parents/children had a positive correlation coefficient of 0.08, while siblings/spouses had a negative coefficient of −0.04.
+
 <br>
 
 <img src="https://github.com/ManuelGehl/Titanic-data-analysis/blob/main/Images/Correlation%20matrix%20+%20survival%20rates.png?raw=true" height=500>
+
 ***Figure 2***: *(A) Correlation matrix showing the correlation coefficients of different features in the training data set. (B) Average survival rates with respect to different features.*
 <br>
 
 Since the survival rates were somewhat ambiguous depending on the number of siblings/spouses and parents/children, the characteristics were combined into the total number of relatives on board (**Fig. 2B**). The survival rates indicate three distinct categories depending on the presence of relatives (**Fig 3**). For individuals traveling alone, the survival rate was relatively low at 30.4%. However, the rate increased significantly for those traveling with at least one and up to three relatives, with an average survival rate of 57.9%. Traveling with more than three relatives resulted in a sharp drop in survival, with a rate of 16.1%. On average, passengers without any relatives or with more than three relatives aboard had a survival rate lower than the overall survival rate. Conversely, passengers with one to three relatives had a substantially higher survival rate.
 
+<br>
 <img src="https://github.com/ManuelGehl/Titanic-data-analysis/blob/main/Images/Survival%20rates%20relatives.png?raw=true" height=400>
+
 ***Figure 3*** *: Average survival rates according to the number of relatives on board.*
 <br>
 
 The port of embarkation appears to have a significant impact on passenger survival rates. The higher survival rates among passengers boarding at Cherbourg can be attributed to secondary factors.. Passengers embarking at Cherbourg paid an average fare of £60 and travelled predominantly in first class, whereas those embarking at Queenstown and Southampton paid much lower fares, averaging £13 and £27 respectively, and travelled predominantly in third class (**Fig. 4**).
 
+<br>
 <img src="https://github.com/ManuelGehl/Titanic-data-analysis/blob/main/Images/Survival%20rates%20ports.png?raw=true" height=300>
+
 ***Figure 4*** *: Average fare paid and most common passenger class selected by passengers embarking at different ports.*
 <br>
  
 The role of age in terms of survival is somewhat ambiguous. On one hand, passengers aged 0 to 5 had a significantly higher survival rate of 70.5%, compared to the overall average of 38.4% (**Fig. 5A**). On the other hand, the survival rate for most age groups is evenly distributed around the overall average without displaying any discernible pattern. A notable exception is the group of passengers aged 10-15, who exhibit a heightened survival rate of 57.9% in comparison to the overall value. This phenomenon can be explained by the synergistic effects of passenger class, paid fare, and number of relatives, as all these values are somewhat higher than the overall average of passengers (**Fig. 5B**). Therefore, it is probable that the higher survival rate for these passengers is a result of sampling.
 
-<img src="https://github.com/ManuelGehl/Titanic-data-analysis/blob/main/Images/Survival%20rates%20age%20categories%20+%20age%2010-15.png?raw=true" height=400>
+<br>
+<img src="https://github.com/ManuelGehl/Titanic-data-analysis/blob/main/Images/Survival%20rates%20age%20categories%20+%20age%2010-15.png?raw=true" height=600>
+
 ***Figure 5*** *: (A) Average survival rate for different age groups. (B) Average characteristic values and fares paid by total passengers (orange) and passengers aged 10-15 (blue).*
 <br>
 
@@ -134,25 +143,31 @@ After analyzing the correlation between diverse passenger characteristics and th
 
 ### [Investigation of other maritime disasters](https://github.com/ManuelGehl/Titanic-data-analysis/blob/9a4c93261a217d8b76f40df6b3b510275c2b78f4/titanic_maritime_disasters.ipynb)
 
-The analysis of maritime disasters during the period from 1897 to 1927 reveals that the majority of these disasters had fewer than 200 casualties, with the bottom half of events having fewer than 149 casualties. However, the range between the minimum and maximum casualties is wide, spanning from 37 to 1496 fatalities. Notably, the sinking of the Titanic stands out with 1496 fatalities, confirming its exceptional nature within the given time frame. Since the Titanic sinking was the biggest maritime disaster of its generation, the subsequent analysis focused on contextualizing it with previous and current maritime disasters from the 18th century onwards.
+The analysis of maritime disasters during the period from 1897 to 1927 reveals that the majority of these disasters had fewer than 200 casualties, with the bottom half of events having fewer than 149 casualties (**Tab. 6**). However, the range between the minimum and maximum casualties is wide, spanning from 37 to 1496 fatalities. Notably, the sinking of the Titanic stands out with 1496 fatalities, confirming its exceptional nature within the given time frame. Since the Titanic sinking was the biggest maritime disaster of its generation, the subsequent analysis focused on contextualizing it with previous and current maritime disasters from the 18th century onwards.
 
+***Table 6*** *: Statistical characteristics for maritime disasters covering the 18th, 19th, 20th and 21st centuries.*
 
 |     Century    |     Mean    |     Stdev    |     Median    |     Min    |     Max    |
 |---|---|---|---|---|---|
+| Titanic period (1897-1927) | 300.4 | 330.4 | 149.0 | 37 | 1496 |
 |     18th    |     515.6    |     662.5    |     269.0    |     86    |     3500    |
 |     19th    |     283.4    |     242.9    |     220.0    |     14    |     1600    |
 |     20th    |     272.2    |     445.9    |     128.5    |     20    |     4386    |
 |     21st    |     152.5    |     267.2    |     53.5    |     2    |     1864    |
 
 
-The analysis of maritime disasters from the 18th to the 21st century suggests a declining trend in their severity with decreases in both mean and median casualties. However, significant variability can be observed across all centuries, as the standard deviation exceeds the mean. Large-scale disasters with over 1,000 casualties are rare, representing only 4.2% of all maritime disasters. However, despite their low frequency, these catastrophic incidents contribute to roughly one-fourth of all fatalities in the dataset. The sinking of the Titanic constitutes 1.3% of all peacetime deaths resulting from maritime disasters occurring between the 18th century and the present. This demonstrates the tremendous scale of the event. If the Titanic had carried 3,547 passengers at full capacity, and with a reported survival rate of 38.4%, it would have been the largest disaster involving a single ship and the third largest maritime disaster.
+The analysis of maritime disasters from the 18th to the 21st century suggests a declining trend in their severity with decreases in both mean and median casualties (**Tab. 6**). However, significant variability can be observed across all centuries, as the standard deviation exceeds the mean. Large-scale disasters with over 1,000 casualties are rare, representing only 4.2% of all maritime disasters (**Fig. 6**). However, despite their low frequency, these catastrophic incidents contribute to roughly one-fourth of all fatalities in the dataset. The sinking of the Titanic constitutes 1.3% of all peacetime deaths resulting from maritime disasters occurring between the 18th century and the present. This demonstrates the tremendous scale of the event. If the Titanic had carried 3,547 passengers at full capacity, and with a reported survival rate of 38.4%, it would have been the largest disaster involving a single ship and the third largest maritime disaster. The only two events that exceeded this hypothetical case were the sinking of the Doña Paz and the fleet under Admiral Graves. The Doña Paz incident involved the ferry of the same name and an oil tanker, while Admiral Graves' fleet consisted of at least 13 ships (**Fig. 6**).
+
+<br>
+<img src="https://github.com/ManuelGehl/Titanic-data-analysis/blob/main/Images/Timeline.png?raw=true" height=400>
+
+***Figure 6*** *: Time line of maritime disasters from 1700 to 2023 with corresponding deaths. The Doña Paz and the fleet under Admiral Graves are the two largest events in terms of casualties, involving at least two ships. The sinking of the RMS Titanic is one of the biggest disasters, claiming 1,492 lives. However, had the Titanic been fully occupied, it would have been the deadliest single-ship disaster in history.*
 <br>
 
-<img src=https://github.com/ManuelGehl/Titanic-data-analysis/blob/main/Images/Timeline.png?raw=true>
-***Figure 6** *: Time line of maritime disasters from 1700 to 2023 with corresponding deaths. The Doña Paz and the fleet under Admiral Graves are the two largest events in terms of casualties, involving at least two ships. The sinking of the RMS Titanic is one of the biggest disasters, claiming 1,492 lives. However, had the Titanic been fully occupied, it would have been the deadliest single-ship disaster in history.*
-## Outlook
-
 ## Literature
+
 Titanic Facts • 1,000+ Fascinating Facts and Figures. https://titanicfacts.net/ (2017).
+
+[List of maritime disasters](https://en.wikipedia.org/w/index.php?title=List_of_maritime_disasters&oldid=1172832230). _Wikipedia_ (2023).
 
 
