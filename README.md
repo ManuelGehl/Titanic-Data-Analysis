@@ -93,7 +93,7 @@ In preparation for the machine learning model, the datasets were transformed (**
 ***Table 2*** *: Preprocessing steps used to transform the datasets. The steps for preprocessing are arranged vertically, while the various columns of the datasets are arranged horizontally. \*The continuous values of Age and Relatives were also subject to standard scaling.*
 
 |Preprocessing step|PassengerID, Ticket, Cabin, Name|Age*|Fare|Pclass|Sex|SibSp|Parch|Embarked|Relatives*|
-|---|---|---|---|---|---|---|---|---|---|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1|Dropped| | | | | | | | |
 |2||Imputation (Mean)|Imputation (Mean)|Imputation (Frequency)|Imputation (Frequency)|Imputation (Frequency)|Imputation (Frequency)|Imputation (Frequency)||
 |3| | | | | | | | |Combined SibSp + Parch|
@@ -118,7 +118,7 @@ The screening of various machine learning models across different datasets revea
 ***Table 4*** *: Results of model screening for various data subsets. Mean accuracy and corresponding standard deviation were computed through 5-fold cross validation.*
 
 |Data Set|Support Vector Classifier|KNN Classifier|Random Forest Classifier|Gradient Boosting Classifier |Multilayer Perceptron|Average Subset Accuracy|
-|---|---|---|---|---|---|---|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Base set|81.4 $\pm$ 2.9|80.4 $\pm$ 3.2|81.0 $\pm$ 4.4|80.9 $\pm$ 4.0|80.4 $\pm$ 2.6|80.8 $\pm$ 0.4|
 |Subset 1|82.7 $\pm$ 3.9|81.0 $\pm$ 4.5|80.5 $\pm$ 5.1|83.4 $\pm$ 4.4|80.7 $\pm$ 3.6|81.7 $\pm$ 1.3|
 |Subset 2|82.2 $\pm$ 3.3|82.2 $\pm$ 4.6|81.8 $\pm$ 4.7|83.4 $\pm$ 4.1|82.0 $\pm$ 3.2|82.3 $\pm$ 0.6|
@@ -134,7 +134,7 @@ The evaluation was conducted by predicting the survival of passengers in the pro
 ***Table 5*** *: Fine tuning results. Accuracy is calculated over the entire training dataset using 5-fold cross-validation for the SVC and GBC. For the MLP, 20% of the training dataset was separated into a validation dataset, which was used to calculate the accuracy. The score on the test dataset was obtained from Kaggle after submitting the predictions made by the models.*
 
 |Model|Fine-tuned parameters    |Accuracy    |     Score on test dataset    |
-|---|---|---|---|
+|:---:|:---:|:---:|:---:|
 |Support Vector Classifier|C = 4.95 <br> class_weights = None <br> kernel = „poly“|83.4% $\pm$ 2.0|78.2%|
 |Gradient Boosting Classifier|learning_rate = 0.16 <br> loss = „log_loss“ <br> n_estimators = 224|83.3% $\pm$ 2.2|76.8%|
 |Multilayer Perceptron|units = 352 <br> activation = „relu“ <br> learning_rate = 0.02|83.2%|76.3%|
@@ -163,6 +163,15 @@ The analysis of maritime disasters from the 18th to the 21st century suggests a 
 
 ***Figure 6*** *: Time line of maritime disasters from 1700 to 2023 with corresponding deaths. The Doña Paz and the fleet under Admiral Graves are the two largest events in terms of casualties, involving at least two ships. The sinking of the RMS Titanic is one of the biggest disasters, claiming 1,492 lives. However, had the Titanic been fully occupied, it would have been the deadliest single-ship disaster in history.*
 <br>
+
+## Conclusion
+The purpose of this study was to examine the factors that impacted survival rates on the Titanic, develop a machine learning model to predict survival, and compare the case of the Titanic to other maritime disasters that took place from the 18th to the 21st century.
+
+The analysis indicated that survival was significantly influenced by passenger class, fare cost, gender, age, the number of relatives on board, and the port of embarkation. Passengers in first class, those who paid higher fares, women, children, and individuals with a moderate number of relatives, specifically between 1 to 3, had a higher likelihood of survival.
+
+Several machine learning models were developed and fine-tuned, resulting in the top-performing models being the Support Vector Classifier (SVC), Gradient Boosting Classifier (GBC), and Multilayer Perceptron (MLP), with accuracies reaching up to 83.4% during model validation. On the test set, the models achieved a high level of accuracy, with the SVC performing better than the others at 78.2%. The models demonstrated significant predictive power, given the baseline accuracy of 61.6%. It is worth noting, however, that there is potential to improve the models further, considering that they have only been evaluated separately and not as an ensemble.
+
+The comparison of the Titanic disaster to other maritime disasters between the 18th and 21st centuries reveals that the sinking still ranks in the top 5% of such events in terms of casualties. If the Titanic had been fully occupied, it would have placed third, surpassed only by the Doña Paz and Admiral Graves' fleet disasters in terms of casualties.
 
 ## Literature
 
