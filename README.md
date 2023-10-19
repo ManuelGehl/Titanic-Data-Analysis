@@ -106,7 +106,7 @@ Different subsets of the transformed dataset were trained with 5 different model
 ***Table 3*** *: Combinations of features used in various datasets to screen machine learning models.*
 
 |Subset|Fare (continuous)|Pclass (categorical)|Sex (categorical)|Embarked (categorical)|Age (continuous)|Age (categorical)|Relatives (continuous)|Relatives (categorical)|Parch (continuous)|SibSp (continuous)|
-|---|---|---|---|---|---|---|---|---|---|---|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Base set|✖|✖|✖|✖|||||||
 |Subset 1|✖|✖|✖|✖|✖||✖|||
 |Subset 2|✖|✖|✖|✖||✖||✖||
